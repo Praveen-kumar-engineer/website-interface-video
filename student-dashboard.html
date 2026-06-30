@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Student Dashboard – SkillBridge</title>
+<meta name="description" content="Student Dashboard dashboard on SkillBridge." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
+<link rel="stylesheet" href="assets/css/styles.css" />
+<link rel="stylesheet" href="assets/css/animations.css" />
+
+</head>
+<body>
+<div class="loader"><div class="loader__ring"></div></div>
+
+<header class="nav"><div class="container nav__inner">
+  <a href="index.html" class="brand"><span class="brand__mark">SB</span> SkillBridge</a>
+  <nav class="nav__links">
+    <a href="index.html">Home</a>
+    <a href="internships.html">Internships</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="student-login.html">Student</a>
+    <a href="company-login.html">Company</a>
+    <a href="admin-login.html">Admin</a>
+  </nav>
+  <div class="nav__cta">
+    <button class="theme-toggle" data-theme-toggle aria-label="Toggle theme"><svg class="sun" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.93 4.93l1.41 1.41M17.66 17.66l1.41 1.41M2 12h2M20 12h2M4.93 19.07l1.41-1.41M17.66 6.34l1.41-1.41"/></svg><svg class="moon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3A7 7 0 0 0 21 12.79z"/></svg></button>
+    <a href="student-login.html" class="btn btn--ghost btn--sm">Sign in</a>
+    <a href="student-register.html" class="btn btn--primary btn--sm">Get Started</a>
+    <button class="nav__burger" data-nav-toggle aria-label="Menu"><span></span><span></span><span></span></button>
+  </div>
+</div></header>
+
+    <div class="dash">
+      <aside class="dash__side">
+        <h5>Student</h5>
+        <nav class="dash__nav">
+  <a href="student-dashboard.html" class="active">📊 Overview</a>
+  <a href="internships.html">🔎 Browse Internships</a>
+  <a href="#applications">📨 My Applications</a>
+  <a href="#notifications">🔔 Notifications</a>
+  <a href="#profile">👤 Profile</a>
+</nav>
+        <h5>Account</h5>
+        <nav class="dash__nav">
+          <a href="index.html">🏠 Home</a>
+          <a href="#" data-signout>↩ Sign out</a>
+        </nav>
+      </aside>
+      <main class="dash__main">
+  <div class="dash__header">
+    <div class="dash__title">
+      <h2>Welcome back, <span data-user-name>Aarav</span> 👋</h2>
+      <p>Here's what's happening with your applications today.</p>
+    </div>
+    <div style="display:flex;gap:10px"><a href="internships.html" class="btn btn--primary btn--sm">Browse Internships</a></div>
+  </div>
+
+  <div class="cards-row">
+    <div class="kpi"><small>Applications</small><b data-count="12">0</b><span class="trend">+3 this week</span></div>
+    <div class="kpi"><small>Shortlisted</small><b data-count="4">0</b><span class="trend">+1 this week</span></div>
+    <div class="kpi"><small>Interviews</small><b data-count="2">0</b><span class="trend">Upcoming</span></div>
+    <div class="kpi"><small>Profile Score</small><b data-count="78" data-suffix="%">0</b><span class="trend">Strong</span></div>
+  </div>
+
+  <div class="panel" id="profile">
+    <div class="profile-card">
+      <div class="ring" style="--p:78"><div class="ring__inner">78%</div></div>
+      <div>
+        <h3 style="margin-bottom:4px">Complete your profile</h3>
+        <p style="margin:0">Add your resume and 2 projects to reach 100% and unlock priority matching.</p>
+        <div style="display:flex;gap:8px;margin-top:10px"><button class="btn btn--primary btn--sm">Upload resume</button><button class="btn btn--ghost btn--sm">Add projects</button></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="panel" id="applications">
+    <div class="panel__head"><h3>My Applications</h3><a href="internships.html" class="btn btn--ghost btn--sm">Apply to more</a></div>
+    <div class="table-wrap"><table class="t">
+      <thead><tr><th>Role</th><th>Company</th><th>Applied</th><th>Status</th></tr></thead>
+      <tbody>
+        <tr><td><b>Frontend Intern</b></td><td>Razorpay</td><td>Today</td><td><span class="badge badge--review">Under Review</span></td></tr>
+        <tr><td><b>Data Analyst Intern</b></td><td>Zomato</td><td>2 days ago</td><td><span class="badge badge--shortlist">Shortlisted</span></td></tr>
+        <tr><td><b>ML Research Intern</b></td><td>Infosys</td><td>5 days ago</td><td><span class="badge badge--selected">Selected</span></td></tr>
+        <tr><td><b>Backend Intern</b></td><td>TCS</td><td>1 week ago</td><td><span class="badge badge--rejected">Rejected</span></td></tr>
+        <tr><td><b>Product Intern</b></td><td>Flipkart</td><td>1 week ago</td><td><span class="badge badge--pending">Pending</span></td></tr>
+      </tbody>
+    </table></div>
+  </div>
+
+  <div class="cards-row" style="grid-template-columns:1.4fr 1fr;margin-top:22px">
+    <div class="panel" style="margin:0">
+      <div class="panel__head"><h3>Upcoming opportunities</h3><a href="internships.html" class="btn btn--ghost btn--sm">See all</a></div>
+      <div class="ilist" style="grid-template-columns:1fr">
+        <article class="icard"><div class="icard__top"><div class="logo">C</div><div><h3 style="margin:0">UI Design Intern</h3><small style="color:var(--text-mute)">CRED · Remote</small></div></div><div class="icard__meta"><span class="tag">Design</span><span class="tag">₹30k/mo</span></div></article>
+        <article class="icard"><div class="icard__top"><div class="logo">A</div><div><h3 style="margin:0">Cloud DevOps</h3><small style="color:var(--text-mute)">AWS · Remote</small></div></div><div class="icard__meta"><span class="tag">Engineering</span><span class="tag">₹45k/mo</span></div></article>
+      </div>
+    </div>
+    <div class="panel" id="notifications" style="margin:0">
+      <h3>Notifications</h3>
+      <div class="notif"><span class="dot"></span><div><b>Zomato shortlisted you</b><br><small>Interview link sent · 2h ago</small></div></div>
+      <div class="notif"><span class="dot"></span><div><b>New match: Razorpay</b><br><small>87% skill match · 5h ago</small></div></div>
+      <div class="notif"><span class="dot"></span><div><b>Profile reviewed by TCS</b><br><small>Yesterday</small></div></div>
+    </div>
+  </div>
+</main>
+    </div>
+    
+<footer class="footer"><div class="container">
+  <div class="footer__grid">
+    <div>
+      <a href="index.html" class="brand"><span class="brand__mark">SB</span> SkillBridge</a>
+      <p style="margin-top:10px;max-width:320px">Bridging students and industry through smart, transparent and high-quality opportunities.</p>
+    </div>
+    <div>
+      <h4>Platform</h4>
+      <ul>
+        <li><a href="internships.html">Browse Internships</a></li>
+        <li><a href="student-register.html">For Students</a></li>
+        <li><a href="company-register.html">For Companies</a></li>
+        <li><a href="admin-login.html">For Admins</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Company</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Careers</a></li>
+        <li><a href="#">Press</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul>
+        <li>hello@skillbridge.app</li>
+        <li>+91 80-4567-2200</li>
+        <li>Bengaluru, India</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer__bottom">
+    <span>© <span data-year></span> SkillBridge. Built for SIH.</span>
+    <span>Crafted with care · v1.0</span>
+  </div>
+</div></footer>
+<script src="assets/js/main.js"></script>
+<script src="assets/js/dashboard.js"></script><script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script><script src="assets/js/supabase.js"></script><script src="assets/js/supabase-integration.js"></script></body></html>
